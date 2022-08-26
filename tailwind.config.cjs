@@ -10,8 +10,22 @@ const brandColors = {
   gray_background: "#eceff1",
 };
 module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
+    screens: {
+      tablet: { max: "767px" },
+      // => @media (min-width: 640px) { ... }
+
+      laptop: { max: "1024px" },
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: { max: "1280px" },
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       colors: {
         ...brandColors,
@@ -23,5 +37,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
