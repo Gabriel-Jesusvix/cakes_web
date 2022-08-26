@@ -1,5 +1,6 @@
 import Logo from "../assets/images/logo.png";
 import maskBackground from "../assets/images/mask.png";
+
 export function Header() {
   return (
     <header>
