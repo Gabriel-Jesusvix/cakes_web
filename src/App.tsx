@@ -9,9 +9,9 @@ export default function App() {
   //   );
   // });
   return (
-    <div className="min-h-full mt-10">
+    <div className="">
       <Header />
-      <div className=" w-full justify-center items-center flex mt-36  h-40 flex-col">
+      <div className=" w-full justify-center items-center flex mt-[90px]  h-40 flex-col">
         <section className="items-center text-center absolute">
           <h1 className="font-poppins font-regular text-primary text-2xl">
             Nira Cakes

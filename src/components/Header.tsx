@@ -1,28 +1,30 @@
 import Logo from "../assets/images/logo.png";
-import maskBackground from "../assets/images/mask.png";
 
 export function Header() {
   return (
-    <header>
-      <div className="">
-        <div className="flex justify-end tablet:hidden">
-          <img src={maskBackground} alt="baackground" />
-        </div>
-        <div className="m-3 absolute w-full top-0 justify-between ">
-          <ul className="flex  justify-between flex-row ">
-            <a href="https://www.instagram.com/nira__cakes/">
-              <img src={Logo} alt="Mira Cakes" />
-            </a>
-            <button className="font-poppins font-normal hover:text-primary hover:underline tablet:hidden">
-              Reviews
-            </button>
-            <div className="flex justify-around w-full">
-              <button className="font-poppins font-normal hover:text-primary hover:underline">
-                Cardápio
-              </button>
-              <button className="font-poppins font-normal hover:text-primary hover:underline">
-                Contato
-              </button>
+    <header className="h-20 flex justify-center items-center">
+      <div className="tablet:w-full ">
+        <div className="tablet:w-full ">
+          <ul className="flex ">
+            <div className="flex tablet:mx-[10px] tablet:w-full tablet:justify-between">
+              <a href="https://www.instagram.com/nira__cakes/">
+                <img
+                  className="tablet:w-[98px] tablet:h-[22.08] flex items-center justify-center"
+                  src={Logo}
+                  alt="Mira Cakes"
+                />
+              </a>
+
+              <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem] tablet:w-[98px] tablet:h-[20px]">
+                <button className="font-poppins font-normal text-secondary hover:text-secondary hover:underline ">
+                  Cardápio
+                </button>
+              </div>
+              <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem]  tablet:w-[98px] tablet:h-[20px]">
+                <button className="font-poppins font-normal text-secondary hover:text-secondary hover:underline ">
+                  Contato
+                </button>
+              </div>
             </div>
           </ul>
         </div>
