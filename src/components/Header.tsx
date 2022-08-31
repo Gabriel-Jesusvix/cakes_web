@@ -2,14 +2,26 @@ import Logo from "../assets/images/logo.png";
 
 export function Header() {
   return (
-    <header className="h-20 flex justify-center items-center">
-      <div className="tablet:w-full ">
-        <div className="tablet:w-full ">
+    <header className="h-20 flex justify-center items-center w-full  ">
+      <div className="tablet:w-full laptop:w-full flex justify-evenly  ">
+        <div className="tablet:w-full w-full">
           <ul className="flex ">
-            <div className="flex tablet:mx-[10px] tablet:w-full tablet:justify-between">
+            <div
+              className="
+              flex
+               tablet:mx-[10px] 
+               tablet:w-full 
+               tablet:justify-between 
+               laptop:w-full 
+               laptop:justify-between 
+               laptop:items-center 
+               laptop:mx-[10px]
+               items-center
+               "
+            >
               <a href="https://www.instagram.com/nira__cakes/">
                 <img
-                  className="tablet:w-[98px] tablet:h-[22.08] flex items-center justify-center"
+                  className="tablet:w-[98px] tablet:h-[22.08] flex items-center justify-center laptop:w-[125px] laptop:h-[30px]"
                   src={Logo}
                   alt="Mira Cakes"
                 />
