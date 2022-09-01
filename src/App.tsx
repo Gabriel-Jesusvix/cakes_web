@@ -3,11 +3,11 @@ import { useEffect } from "react";
 import { Carrousel } from "./components/Carrousel";
 
 export default function App() {
-  // useEffect(() => {
-  //   alert(
-  //     "Seja bem vindo! Site em criação, entre em contato com (27)9.9589-9522"
-  //   );
-  // });
+  useEffect(() => {
+    alert(
+      "Seja bem vindo! Site em criação, entre em contato com (27)9.9589-9522"
+    );
+  });
   return (
     <div className="">
       <Header />
