@@ -24,7 +24,7 @@ export default function App() {
           </span>
         </section>
       </div>
-      <div className=" w-full border-[0.01px]   shadow:shadow-lg" />
+      <div className=" w-full border   shadow-2xl" />
       <div className="mt-8 justify-center items-center flex flex-col">
         <h1 className="font-poppins font-bold text-secondary text-2xl italic ">
           Nossos Exclusivos

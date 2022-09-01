@@ -2,8 +2,8 @@ import Logo from "../assets/images/logo.png";
 
 export function Header() {
   return (
-    <header className="h-20 flex justify-center items-center w-full  ">
-      <div className="tablet:w-full laptop:w-full flex justify-evenly  ">
+    <header className="h-20 flex justify-center items-center w-full ">
+      <div className="tablet:w-full laptop:w-full flex justify-evenly">
         <div className="tablet:w-full w-full">
           <ul className="flex ">
             <div
