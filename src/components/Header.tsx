@@ -1,6 +1,9 @@
 import Logo from "../assets/images/logo.png";
 
-export function Header() {
+interface HeaderProps {
+  onNext: () => void;
+}
+export function Header({ onNext }: HeaderProps) {
   return (
     <header className="h-20 flex justify-center items-center w-full ">
       <div className="tablet:w-full laptop:w-full flex justify-evenly">
@@ -28,7 +31,10 @@ export function Header() {
               </a>
 
               <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem] tablet:w-[98px] tablet:h-[20px]">
-                <button className="font-poppins font-normal text-secondary hover:text-secondary hover:underline ">
+                <button
+                  className="font-poppins font-normal text-secondary hover:text-secondary hover:underline"
+                  onClick={onNext}
+                >
                   Cardápio
                 </button>
               </div>
