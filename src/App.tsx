@@ -81,9 +81,10 @@ export default function App() {
           Nossos Exclusivos
         </h1>
       </div>
-      <div className="flex ">
+      <div className="flex scroll-m-1">
         <Carrousel data={cakes} />
       </div>
+      <div className=" w-full border mt-8  shadow-2xl" />
     </div>
   );
 }
