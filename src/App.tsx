@@ -1,13 +1,64 @@
+import { useState, useEffect } from "react";
+import { database } from "./firebaseConnection";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 import { Header } from "./components/Header";
-import { useEffect } from "react";
 import { Carrousel } from "./components/Carrousel";
 
+interface CakesProps {
+  id: string;
+  name: string;
+  description: string;
+  forUntil: string;
+}
 export default function App() {
+  const [cakes, setCakes] = useState([
+    {
+      id: "1",
+      name: "Bolo de Chocolate",
+      description:
+        "Bolo com massa artesanal de menteiga com chocolate 50% cacau e chocolate nobre",
+      forUntil: "4 a 5",
+    },
+    {
+      id: "2",
+      name: "Bolo de nutella",
+      description:
+        "Bolo com massa artesanal de menteiga com nutella 50% cacau e chocolate nobre",
+      forUntil: "3 a 6",
+    },
+    {
+      id: "3",
+      name: "Bolo de morango",
+      description:
+        "Bolo com massa artesanal de menteiga com morango 50% cacau e chocolate nobre",
+      forUntil: "6 a 8",
+    },
+    {
+      id: "4",
+      name: "Bolo de Avelã",
+      description:
+        "Bolo com massa artesanal de menteiga com Avelã 50% cacau e chocolate nobre",
+      forUntil: "9 a 12",
+    },
+    {
+      id: "5",
+      name: "Bolo de Maracujá",
+      description:
+        "Bolo com massa artesanal de menteiga com Maracujá 50% cacau e chocolate nobre",
+      forUntil: "15 a 20",
+    },
+  ]);
+
+  // async function getCakesDb() {
+  //   const dataRef = doc(database, "cakes", "FDcS69JWG6RoPYx9GnE5");
+  //   await getDoc(dataRef).then((snapshot) => {
+  //     // setCakes(snapshot.data()!.name);
+  //   });
+  // }
+
   // useEffect(() => {
-  //   alert(
-  //     "Seja bem vindo! Site em criação, entre em contato com (27)9.9589-9522"
-  //   );
-  // });
+  //   getCakesDb();
+  // }, []);
   return (
     <div className="">
       <Header />
@@ -30,8 +81,8 @@ export default function App() {
           Nossos Exclusivos
         </h1>
       </div>
-      <div>
-        <Carrousel />
+      <div className="flex ">
+        <Carrousel data={cakes} />
       </div>
     </div>
   );
