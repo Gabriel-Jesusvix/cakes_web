@@ -10,14 +10,12 @@ interface Props {
 }
 
 export function Carrousel({ data }: Props) {
-  console.log("data", data);
   return (
     <>
       {data.map((cake) => (
         <div className="px-2 py-2  ">
           <div
-            className="
-
+            className="          
             shadow-2xl
            tablet:bg-bg_button 
             tablet:w-[150px] 
@@ -47,7 +45,7 @@ export function Carrousel({ data }: Props) {
               {/* // Image aqui */}
             </div>
 
-            <div className="tablet:w-[150px] tablet:h-[50px] bg-white items-center justify-center flex   text-center">
+            <div className="tablet:w-[150px] tablet:h-[45px] bg-white items-center justify-center flex  text-center">
               <h1 className="font-[Poppins] font-light text-[13px] text-secondary">
                 {cake.name}{" "}
               </h1>
