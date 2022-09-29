@@ -41,7 +41,7 @@ export function Header({ onNext }: HeaderProps) {
             </div>
             <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem]  tablet:w-[98px] tablet:h-[20px]">
               <button className="font-poppins font-normal text-secondary hover:text-secondary hover:underline ">
-                Contato
+                <a href="https://wa.me/5527995899522">Contato</a>
               </button>
             </div>
           </div>
