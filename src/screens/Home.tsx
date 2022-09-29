@@ -81,7 +81,7 @@ export function Home() {
     navigate("/menu");
   }
   return (
-    <div className="">
+    <div>
       <Header onNext={handleNextMenuUser} />
       <div className=" w-full justify-center items-center flex mt-[90px]  h-40 flex-col">
         <section className="items-center text-center absolute">

@@ -1,9 +1,10 @@
 import Logo from "../assets/images/logo.png";
 
 interface HeaderProps {
-  onNext: () => void;
+  onNext?: () => void;
+  hidden?: boolean;
 }
-export function Header({ onNext }: HeaderProps) {
+export function Header({ onNext, hidden }: HeaderProps) {
   return (
     <header className=" px-4 py-4 w-full  ">
       <div className="tablet:w-full  ">
@@ -31,14 +32,19 @@ export function Header({ onNext }: HeaderProps) {
               />
             </a>
 
-            <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem] tablet:w-[98px] tablet:h-[20px]">
-              <button
-                className="font-poppins font-normal text-secondary hover:text-secondary hover:underline"
-                onClick={onNext}
-              >
-                Cardápio
-              </button>
-            </div>
+            {hidden ? (
+              ""
+            ) : (
+              <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem] tablet:w-[98px] tablet:h-[20px]">
+                <button
+                  className="font-poppins font-normal text-secondary hover:text-secondary hover:underline"
+                  onClick={onNext}
+                >
+                  Cardápio
+                </button>
+              </div>
+            )}
+
             <div className="bg-bg_button p-3 h-5 justify-center flex items-center rounded-lg w-[7rem]  tablet:w-[98px] tablet:h-[20px]">
               <button className="font-poppins font-normal text-secondary hover:text-secondary hover:underline ">
                 <a href="https://wa.me/5527995899522">Contato</a>
